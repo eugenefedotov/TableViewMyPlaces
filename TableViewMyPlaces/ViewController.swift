@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imagePlaces.image = UIImage(named: restaurantNames[indexPath.row])
         cell.imagePlaces.layer.cornerRadius = cell.imagePlaces.frame.size.height / 2
         cell.imagePlaces.clipsToBounds = true
+        print("test")
         
         return cell
     }
