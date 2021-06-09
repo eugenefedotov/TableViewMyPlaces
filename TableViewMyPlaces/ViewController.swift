@@ -20,17 +20,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
     }
     
+    // MARK: - Table view data source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else { fatalError() }
-        cell.textLabel?.text = restaurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: restaurantNames[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")  as? CustomTableViewCell else { return UITableViewCell() }
+
+        cell.lblName.text = restaurantNames[indexPath.row]
+        cell.imagePlaces.image = UIImage(named: restaurantNames[indexPath.row])
+        cell.imagePlaces.layer.cornerRadius = cell.imagePlaces.frame.size.height / 2
+        cell.imagePlaces.clipsToBounds = true
+        
         return cell
     }
+    
+    // MARK: - Table view delegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 
+    // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 
