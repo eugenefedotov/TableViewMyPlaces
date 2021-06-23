@@ -72,6 +72,7 @@
                                             <outlet property="lblLocation" destination="6ko-Zt-JPp" id="A68-nE-aKJ"/>
                                             <outlet property="lblName" destination="6Ox-a7-eyM" id="g5b-rp-4JH"/>
                                             <outlet property="lblType" destination="sjj-2S-r4A" id="9wG-D6-kIe"/>
+                                            <segue destination="irg-tx-lQk" kind="show" identifier="showDetail" id="nWI-1g-gYX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="114"/>
+            <point key="canvasLocation" x="870" y="114"/>
         </scene>
         <!--New Place-->
         <scene sceneID="5No-rV-8tL">
@@ -270,7 +271,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DID-0W-hDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wqr-zS-Wa7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2385.507246376812" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1677" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2G-nq-ZNO">
@@ -309,9 +310,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2y-TQ-aRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647.826086956522" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1641" y="-558"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nWI-1g-gYX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="systemBackgroundColor">
